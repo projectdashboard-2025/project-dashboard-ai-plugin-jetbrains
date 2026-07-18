@@ -1,0 +1,114 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='light'] footer {
+  background-color: #1B1B1D;
+}
+
+html[data-theme='dark'] footer {
+  background-color: #1B1B1D;
+}
+
+/* ---- Feedback form (src/components/PluginFeedback.jsx) ---- */
+
+.feedback-form {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+.feedback-form fieldset {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  padding: 16px;
+}
+.feedback-form legend {
+  padding: 0 6px;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.feedback-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.feedback-comment-label {
+  font-size: 14px;
+  color: var(--ifm-color-emphasis-700);
+  margin-top: 4px;
+}
+.feedback-form textarea {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--ifm-font-color-base);
+  font-family: var(--ifm-font-family-base);
+  resize: vertical;
+}
+.feedback-form button[type='submit'] {
+  align-self: flex-start;
+  background: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.feedback-form button[type='submit']:hover {
+  background: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+.feedback-form button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.feedback-error {
+  color: #e0245e;
+  font-size: 14px;
+}
+.feedback-success {
+  max-width: 480px;
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 10px;
+  color: var(--ifm-color-primary-darker);
+}
