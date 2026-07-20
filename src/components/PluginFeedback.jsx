@@ -4,7 +4,7 @@ import { createClient } from '@supabase/supabase-js';
 
 
 const SUPABASE_URL = 'https://emlyneavoqtghwjztnzg.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVtbHluZWF2b3F0Z2h3anp0bnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NTY2MTAsImV4cCI6MjA5OTQzMjYxMH0.Ry6OFB_tdTtHmNx-B3XFPsC0VW4dmzFrPh2GmoOhGZI';
+const SUPABASE_ANON_KEY = 'sb_publishable_xEufk9l4tpDWHbGdOA6lEQ_Kqrxp_w7';
 
 let supabaseClient = null;
 function getSupabaseClient() {
