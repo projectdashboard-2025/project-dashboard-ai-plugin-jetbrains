@@ -1,4 +1,4 @@
-// @ts-check
+8// @ts-check
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -17,11 +17,14 @@ const config = {
   },
 
 
+  // Custom domain (Cloudflare-registered)
   url: 'https://project-dashboard-ai.com',
 
+  // Site now lives at domain root, not a repo subpath
   baseUrl: '/',
 
 
+  // GitHub repository
   organizationName: 'projectdashboard-2025',
 
   projectName: 'project-dashboard-ai-plugin-jetbrains',
@@ -39,7 +42,9 @@ const config = {
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-8SFEQ7EFW7',
+        // TODO: confirm this is the correct, currently-intended GA property —
+        // the live site was seen loading G-8SFEQ7EFW7 instead of this ID.
+        trackingID: 'G-8KRZKBMHDK',
         anonymizeIP: true,
       },
     ],
@@ -68,7 +73,9 @@ const config = {
 
         },
 
-
+        // Auto-generates sitemap.xml at build time from `url` above — already
+        // active by default via the classic preset, listed explicitly here so
+        // the priority/changefreq values are visible and easy to tune later.
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
@@ -90,10 +97,31 @@ const config = {
 
       ({
 
+        // Default OG/Twitter card image for every page that doesn't set its
+        // own — put a real 1200×630 PNG/JPG at this path in static/.
+        image: 'img/social-card.png',
+
         metadata: [
           {
+            // TODO: replace with a NEW token — this one was issued for
+            // project-dashboard-ai.is-a.dev, a different Search Console
+            // property than project-dashboard-ai.com. Get a fresh one from
+            // search.google.com/search-console after adding the new domain.
             name: 'google-site-verification',
-            content: 'H__XNyxbw57wTp_h2j1gHco9IPMW0r8UC65ptTIrCzM',
+            content: 'PASTE_NEW_TOKEN_FOR_.com_DOMAIN_HERE',
+          },
+          {
+            name: 'keywords',
+            content:
+                'JetBrains plugin, IntelliJ IDEA, AI commit messages, GitHub Issues sync, project dashboard, AI code assistant',
+          },
+          {
+            property: 'og:site_name',
+            content: 'Project Dashboard AI',
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary_large_image',
           },
         ],
 
